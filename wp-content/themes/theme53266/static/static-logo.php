@@ -2,15 +2,8 @@
 <!-- BEGIN LOGO -->
 <div class="logo pull-left">
 	<?php if(of_get_option('logo_type') == 'text_logo'){?>
-    
-                
 
-    
-			<?php if( is_front_page() || is_home() || is_404() ) { ?>
-					<h1 class="logo_h logo_h__txt"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('description'); ?>" class="logo_link"><?php bloginfo('name'); ?></a></h1>
-			<?php } else { ?>
-					<h2 class="logo_h logo_h__txt"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('description'); ?>" class="logo_link"><?php bloginfo('name'); ?></a></h2>
-			<?php } ?>
+			<h1 class="logo_h logo_h__txt"><a href="<?php echo home_url(); ?>/" title="<?php bloginfo('description'); ?>" class="logo_link"><?php bloginfo('name'); ?></a></h1>
             
   	        <?php $tagline = get_bloginfo('description'); if ( $tagline!='' ) { ?>
             
