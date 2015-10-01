@@ -1,0 +1,526 @@
+/* ---- customize styles here ---- */
+
+.parallax-slider{
+	height: 720px;
+    position: relative;
+    
+    @media (max-width: 767px){
+	   height: 450px;
+	}
+    
+    @media (max-width: 530px){
+	   height: 250px;
+    }
+            
+	
+	#mainCaptionHolder{
+		.container {
+            top: 20%;
+            width: 530px;
+            height: 348px !important;
+            position: relative;
+            margin-right: -585px;
+            right: 50%;
+            
+            @media (max-width: 1200px) and (min-width: 979px){
+                margin-right: -475px;
+            }
+            
+        	@media (min-width: 768px) and (max-width: 979px) {
+                margin-right: -375px;
+        	}
+            
+            @media (max-width: 767px){
+                margin-left: 20px;
+                width: 480px;
+                height: 290px !important;
+                left: 0;            
+                top: 30px;
+        	}
+                        
+            @media (max-width: 530px){
+                width: 0;
+            }
+            
+            .extraslidercontainer{
+                width: 530px;
+                height: 242px !important;
+                margin-top: 55px;
+                position: relative;
+                overflow: visible;
+                box-sizing: border-box;
+                padding: 0 !important;
+                text-align: left;
+                border: 5px solid @white;
+                background: transparent;    
+                .transition(0.3s);   
+                &:hover{ 
+                    background: @white; 
+                    .transition(0.3s); 
+                    h2{
+                        color: @gray;
+                        a{  
+                            color: @gray;
+                            &:hover{
+                                color: @yellow;
+                            }
+                        }
+                    }
+                    p {
+                        color: @gray !important;
+                        .transition(0.3s);
+                    }
+                }
+                
+                @media (max-width: 1200px) and (min-width: 979px){
+                    margin-left: 0;
+                }
+            	@media (min-width: 768px) and (max-width: 979px) {
+                    margin-left: 0;
+            	}
+                       
+                @media (max-width: 767px){
+                    margin-left: 0;
+                    height: 170px !important;
+                    width: 100% !important;
+                    padding: 0 !important;
+            	}
+                 @media (max-width: 530px){
+                    display: none;
+                }
+            
+            }
+		}
+		.slider_caption {
+			text-align:center;
+            
+			
+			h2 {
+			    font-family: 'Arial', sans-serif;
+				font-size: 80px;
+				line-height:72px;
+				font-weight:bold;
+                text-transform: uppercase;
+                color: @white;
+                text-align: left;
+                letter-spacing: -1px;
+                padding: 0;
+                margin: 0 0 0;
+                a{
+                    color: @white;
+                    &:hover{ 
+                        color: @yellow;
+                    }
+                }
+                
+               
+            @media (max-width: 767px){
+				font-size: 24px;
+				line-height:24px;
+        	}
+	
+			}
+            
+            .btn.btn-primary{
+                position: absolute;
+                text-transform: none;
+                float: left;
+                margin-top: 0;
+                bottom: -89px;
+                left: 0;
+            }
+            
+   			p {
+                font-family: 'Arial', sans-serif;
+				font-size: 17px;
+				line-height:22px;
+                font-weight: 400 !important;
+                text-transform: none;
+                text-align: left !important; 
+                color: @white !important;
+                margin: 2px 20px;
+                .transition(0.3s);
+                
+                @media (max-width: 767px){
+                    margin: 2px 0;
+                }
+	
+			}
+        
+        }
+        
+	}
+	
+	.controlBtn {
+		width: 45px;
+		height: 45px;
+		margin-top: 0;
+
+		
+		.innerBtn{				
+			background: transparent;
+            &:before{
+                display: none;
+            }
+		}
+	}
+	.controlBtn:hover {
+		.innerBtn{
+            background-position: right top;
+            .transition(0.3s);
+		}
+	}
+	
+	.parallaxPrevBtn, .parallaxNextBtn {
+		.transition(all 0.5s ease);
+	}
+    
+
+	.slidesCounter{
+	   position: absolute;
+		right: 100px;
+        width: 65px;
+        height: 46px;
+        bottom: 1px;
+		font-size: 16px;
+		line-height: 46px;
+        text-align: center;
+		color: @white;
+		background: transparent;
+        border: 5px solid @white;
+        border-top: 0;
+        @media (max-width: 767px){
+            bottom: 15px;
+        }
+	}
+
+	.parallaxPrevBtn {
+		right: 50px;
+        bottom: 1px;
+        border: 5px solid @white;
+        border-top: 0;
+        
+		.innerBtn{
+            background: url(images/sl_prev.png) left top no-repeat; 
+            .transition(0.3s);
+		}
+	
+	}
+	.parallaxNextBtn {
+        right: 0;
+        bottom: 1px;
+        border: 5px solid @white;
+        border-top: 0;
+        
+		.innerBtn{
+            background: url(images/sl_next.png) left top no-repeat; 
+            .transition(0.3s);
+		}
+	}
+
+	
+	#paralaxSliderPagination{
+		bottom: 15px;
+		
+		&.buttons_pagination{
+			ul{
+				li{
+					border-radius: 50%;
+					margin: 3px;
+					width: 10px;
+					height: 10px;
+					border: 2px solid @linkColor;
+					
+					&:hover, &.active{
+						background: @orange;
+					}
+				}
+			}
+		}
+		&.images_pagination{
+			ul{
+				li{
+					margin: 3px;
+					opacity:.5;
+					
+					&:hover, &.active{
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+	
+	#previewSpinner{	
+		width: 50px;
+		height: 50px;
+		margin-left: -25px;
+		margin-top: -25px;
+		border-radius: 25px;
+		background: url(parallax-slider/img/spinner.GIF) 50% 50% #fff no-repeat;
+	}
+}
+
+
+
+/* ---- necessary slider settings  ---- */
+/* ---- without the need doesn't change anything  ---- */
+
+.parallax-slider{
+	overflow: hidden;
+	position:relative;
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+
+	.baseList{
+		display: none;
+	}
+	
+	
+	#mainImageHolder{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		
+		.primaryHolder, .secondaryHolder{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			
+			.imgBlock {
+				max-width: inherit;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+		}
+		.primaryHolder{
+			z-index:2;
+		}
+		.secondaryHolder{
+			z-index: 1;
+		}		
+	}
+	
+    
+	
+	#mainCaptionHolder{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		
+		.container {
+			position:relative;
+		}
+		
+		.primaryCaption, .secondaryCaption {
+			position: absolute;
+            padding: 65px 10px 0 36px;
+            min-height: 225px;
+            box-sizing: border-box;
+            @media (max-width: 767px){
+                padding: 45px 15px 0 15px;
+                min-height: 160px;
+        	}
+		}
+	}
+	
+	
+	.controlBtn{
+		position: absolute;
+		cursor: pointer;
+		display: block;
+		z-index: 2;
+        
+        @media (max-width: 1200px) and (min-width: 979px){
+
+        }
+        
+        @media (min-width: 768px) and (max-width: 979px) {
+
+        }
+        
+        @media (max-width: 767px){
+            margin-left: 0; 
+            bottom: 15px !important;
+        }
+		
+		.innerBtn{
+			.transition(all 0.3s ease);
+			position: relative;
+			display:block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			z-index: 1;
+		}
+		.slidesCounter{
+			.transition(all 0.3s ease);
+			position: absolute;
+			top: 0;
+			width: 60%;
+			height: 100%;
+		}
+		
+		&.parallaxPrevBtn{
+		  
+            
+			.slidesCounter{
+				left: 0%;
+				text-align:left;
+			}
+			&:hover{
+				.slidesCounter{
+					left: 100%;
+				}
+			}
+		}
+		&.parallaxNextBtn{
+			.slidesCounter{
+				right: 0%;
+				text-align:right;
+			}
+			&:hover{
+				.slidesCounter{
+					right: 100%;
+				}
+			}
+		}
+	}
+	
+	
+	#paralaxSliderPagination{		
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		z-index: 2;
+		
+		ul{
+			list-style: none;
+			margin: 0;
+			
+			li{
+				.transition(all 0.5s ease);
+				cursor: pointer;
+				display: inline-block;
+			}
+		}
+	}
+	
+	
+	#previewSpinner{	
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		z-index: 99;
+	}
+	
+	
+	&.zoom-fade-eff{
+		#mainImageHolder{
+			.primaryHolder{
+				.opacity(100);
+				.scale(1);
+					&.animateState{
+						.opacity(0);
+						.scale(3);
+					}
+			}
+			.secondaryHolder{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+		}
+		#mainCaptionHolder{
+			.primaryCaption{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+			.secondaryCaption{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+		}
+	}
+	&.simple-fade-eff{
+		#mainImageHolder{
+			.primaryHolder{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+			.secondaryHolder{
+				&.animateState{
+					.opacity(100);
+						&.animateState{
+							.opacity(0);
+						}
+				}
+			}
+		}
+		#mainCaptionHolder{
+			.primaryCaption{
+				.opacity(100);
+				.scale(1);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+			.secondaryCaption{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+		}
+	}
+	&.slide-top-eff{
+		#mainImageHolder{
+			.primaryHolder{
+				top: 0;
+					&.animateState{
+						top: -100%;
+					}
+			}
+			.secondaryHolder{
+				&.animateState{
+					top: 0;
+						&.animateState{
+							top: 100%;
+						}
+				}
+			}
+		}
+		#mainCaptionHolder{
+			.primaryCaption{
+				.opacity(100);
+				.scale(1);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+			.secondaryCaption{
+				.opacity(100);
+					&.animateState{
+						.opacity(0);
+					}
+			}
+		}
+	}
+}
