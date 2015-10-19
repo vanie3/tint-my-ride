@@ -1833,6 +1833,12 @@ nav.footer-nav {
 	float:right;
 	overflow:hidden;
 }
+.social-media{
+	text-align: right;
+}
+.social-media a{
+	margin-right: 40px;
+}
 @media (min-width: 768px) and (max-width: 979px) {
 	nav.footer-nav { float:none; }
 }
